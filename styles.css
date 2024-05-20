@@ -21,7 +21,8 @@ header {
 }
 
 header .logo {
-    width: 100px;
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
 }
 
 nav ul {
