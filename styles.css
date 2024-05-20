@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #007BFF;
+    background: #0056b3; /* Darker blue for header */
     color: white;
     padding: 20px 0;
     display: flex;
@@ -21,7 +21,7 @@ header {
 }
 
 header .logo {
-    width: 150px; /* Adjust the width as needed */
+    width: 100px; /* Adjust the width as needed */
     height: auto;
 }
 
@@ -43,7 +43,7 @@ nav ul li a {
 }
 
 .hero {
-    background: linear-gradient(to right, #007BFF, #00aaff);
+    background: linear-gradient(to right, #0056b3, #007bff); /* Gradient blue for hero section */
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -61,7 +61,7 @@ section {
 section h2 {
     text-align: center;
     font-size: 2em;
-    color: #007BFF;
+    color: #0056b3; /* Darker blue for section titles */
     margin-bottom: 20px;
 }
 
