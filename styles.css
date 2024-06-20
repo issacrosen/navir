@@ -12,17 +12,19 @@ body {
 }
 
 header {
-    background: #0056b3; /* Darker blue for header */
+    background: #1e3a57; /* Darker blue for header */
     color: white;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
 }
 
 header .logo {
-    width: 100px; /* Adjust the width as needed */
+    width: 50px; /* Adjust the width as needed */
     height: auto;
+    margin-left: 20px;
+    align-items: left;
 }
 
 nav ul {
@@ -45,13 +47,14 @@ nav ul li a {
 .hero {
     background: linear-gradient(to right, #0056b3, #007bff); /* Gradient blue for hero section */
     color: white;
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 .hero h2 {
     margin: 0;
     font-size: 2.5em;
+    color: rgb(235, 196, 196);
 }
 
 section {
