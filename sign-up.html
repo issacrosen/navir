@@ -183,6 +183,33 @@
         
         form.addEventListener('submit', function(event) {
             event.preventDefault();
+
+            const browserInfo = document.createElement('input');
+      browserInfo.type = 'hidden';
+      browserInfo.name = 'browserInfo';
+      browserInfo.value = navigator.userAgent;
+      form.appendChild(browserInfo);
+      
+      // Create hidden field for referrer
+      const referrer = document.createElement('input');
+      referrer.type = 'hidden';
+      referrer.name = 'referrer';
+      referrer.value = document.referrer || window.location.href;
+      form.appendChild(referrer);
+      
+      // Create hidden field for screen size
+      const screenInfo = document.createElement('input');
+      screenInfo.type = 'hidden';
+      screenInfo.name = 'screenInfo';
+      screenInfo.value = `${window.innerWidth}x${window.innerHeight}`;
+      form.appendChild(screenInfo);
+      
+      // Create hidden field for timezone
+      const timezone = document.createElement('input');
+      timezone.type = 'hidden';
+      timezone.name = 'timezone';
+      timezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      form.appendChild(timezone);
             
             // Show loading state
             const submitButton = this.querySelector('button[type="submit"]');
