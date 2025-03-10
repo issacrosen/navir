@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Navir Technology Consulting</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #3182ce 100%);
+        }
+        .form-control:focus {
+            border-color: #3182ce;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.25);
+        }
+    </style>
+</head>
+<body class="h-full">
+    <div class="min-h-full flex flex-col">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <a href="index.html">
+                                <img src="logo.webp" alt="Navir Logo" class="h-10">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-6">
+                            <a href="index.html#home" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Home</a>
+                            <a href="index.html#services" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Services</a>
+                            <a href="index.html#about" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">About Us</a>
+                            <a href="index.html#contact" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-md w-full space-y-8">
+                <div class="text-center">
+                    <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Talk to an expert</h2>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Join Navir Technology to access exclusive resources and services
+                    </p>
+                </div>
+                
+                <div class="mt-8 bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                    <form id="navir-contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">
+                                    First name
+                                </label>
+                                <div class="mt-1">
+                                    <input type="text" name="first-name" id="firstName" autocomplete="given-name" required class="form-control appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">
+                                    Last name
+                                </label>
+                                <div class="mt-1">
+                                    <input type="text" name="last-name" id="lastName" autocomplete="family-name" required class="form-control appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">
+                                Email address
+                            </label>
+                            <div class="mt-1">
+                                <input id="email" name="email" type="email" autocomplete="email" required class="form-control appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700">
+                                Company name
+                            </label>
+                            <div class="mt-1">
+                                <input type="text" name="company" id="company" class="form-control appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">
+                                Phone number
+                            </label>
+                            <div class="mt-1">
+                                <input type="tel" name="phone" id="phone" autocomplete="tel" class="form-control appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="interests" class="block text-sm font-medium text-gray-700">
+                                I'm interested in
+                            </label>
+                            <div class="mt-1">
+                                <select id="interests" name="interests" class="form-control appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                    <option value="" selected disabled>Select an option</option>
+                                    <option value="networking">Networking solutions</option>
+                                    <option value="voice">Voice solutions</option>
+                                    <option value="ai">AI solutions</option>
+                                    <option value="cloud">Cloud solutions</option>
+                                    <option value="multiple">Multiple services</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <input id="newsletter" name="newsletter" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label for="newsletter" class="ml-2 block text-sm text-gray-900">
+                                    Subscribe to our newsletter
+                                </label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input id="sms" name="smsConsent" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+
+                                <label for="sms" class="ml-2 block text-sm text-gray-900">
+                                    Receive SMS notifications
+                                </label>
+                            </div>
+                            <div class="text-xs text-gray-500 ml-6">
+                                By checking this box, you consent to receive text messages from Navir Technology. Message and data rates may apply.
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="terms" name="termsAgreed" type="checkbox" required class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="terms" class="font-medium text-gray-700">I agree to the <a href="terms.html" class="text-blue-600 hover:text-blue-500">Terms of Service</a> and <a href="privacy.html" class="text-blue-600 hover:text-blue-500">Privacy Policy</a></label>
+                            </div>
+                        </div>
+                        <div id="form-message" class="hidden"></div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-gray-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="mb-4 md:mb-0">&copy; 2025 Navir. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                        <a href="privacy.html" class="hover:underline text-sm">Privacy Policy</a>
+                        <a href="terms.html" class="hover:underline text-sm">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('navir-contact-form');
+        const formMessage = document.getElementById('form-message');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Submitting...';
+            
+            // Create form data object
+            const formData = new FormData(form);
+            
+            // Convert checkboxes to boolean values
+            const formDataObj = {};
+            formData.forEach((value, key) => {
+                // Handle checkbox values
+                if (key === 'newsletter' || key === 'smsConsent' || key === 'termsAgreed') {
+                    formDataObj[key] = true;
+                } else {
+                    formDataObj[key] = value;
+                }
+            });
+            
+            // Submit the form data to your endpoint
+            fetch('https://telnyx-webhook.entpher.io/telnyx/webhook/7a9e8b1f2c3d4e5f6789abcd0123456f/navir-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formDataObj),
+                redirect: 'follow'
+
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle success
+                formMessage.classList.remove('hidden', 'text-red-500');
+                formMessage.classList.add('text-green-500', 'py-2', 'text-center');
+                formMessage.textContent = 'Thank you! Your submission has been received.';
+                
+                // Reset form
+                form.reset();
+                
+                window.location.href = 'thank-you.html';
+            })
+            .catch(error => {
+                // Handle error
+                console.error('Error:', error);
+                formMessage.classList.remove('hidden', 'text-green-500');
+                formMessage.classList.add('text-red-500', 'py-2', 'text-center');
+                formMessage.textContent = 'There was an error submitting your form. Please try again.';
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
