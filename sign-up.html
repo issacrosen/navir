@@ -41,7 +41,7 @@
                             <a href="index.html#home" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Home</a>
                             <a href="index.html#services" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Services</a>
                             <a href="index.html#about" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">About Us</a>
-                            <a href="index.html#contact" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contact</a>
+                            <a href="sign-up.html" class="px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                 <div class="text-center">
                     <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Talk to an expert</h2>
                     <p class="mt-2 text-sm text-gray-600">
-                        Join Navir Technology to access exclusive resources and services
+                        Join Navir to access exclusive resources and services
                     </p>
                 </div>
                 
@@ -126,19 +126,19 @@
                             <div class="flex items-center">
                                 <input id="newsletter" name="newsletter" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
                                 <label for="newsletter" class="ml-2 block text-sm text-gray-900">
-                                    Subscribe to our newsletter
+                                    Subscribe to our email newsletter
                                 </label>
                             </div>
-                            
+
                             <div class="flex items-center">
                                 <input id="sms" name="smsConsent" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
 
                                 <label for="sms" class="ml-2 block text-sm text-gray-900">
-                                    Receive SMS notifications
+                                    Text me consultation scheduling, project updates, and support replies (optional)
                                 </label>
                             </div>
                             <div class="text-xs text-gray-500 ml-6">
-                                By checking this box, you consent to receive text messages from Navir Technology. Message and data rates may apply.
+                                By checking this box, you agree to receive recurring automated text messages from Navir Inc. at the mobile number provided, including consultation scheduling and reminders, project and service updates, and replies to your support requests. Consent is not a condition of purchase. Msg frequency varies (up to 4 msgs/week). Msg &amp; data rates may apply. Reply <strong>HELP</strong> for help or <strong>STOP</strong> to opt out at any time. See our <a href="terms.html" class="text-blue-600 hover:text-blue-500">Terms of Service</a> and <a href="privacy.html" class="text-blue-600 hover:text-blue-500">Privacy Policy</a>.
                             </div>
                         </div>
 
@@ -167,7 +167,7 @@
         <footer class="bg-gray-800 text-white">
             <div class="max-w-7xl mx-auto px-4 py-6">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="mb-4 md:mb-0">&copy; 2025 Navir. All rights reserved.</p>
+                    <p class="mb-4 md:mb-0">&copy; 2026 Navir Inc. All rights reserved.</p>
                     <div class="flex space-x-4">
                         <a href="privacy.html" class="hover:underline text-sm">Privacy Policy</a>
                         <a href="terms.html" class="hover:underline text-sm">Terms of Service</a>
@@ -183,6 +183,17 @@
         
         form.addEventListener('submit', function(event) {
             event.preventDefault();
+
+            // SMS consent requires a mobile number
+            const smsBox = document.getElementById('sms');
+            const phoneInput = document.getElementById('phone');
+            if (smsBox.checked && !phoneInput.value.trim()) {
+                formMessage.classList.remove('hidden', 'text-green-500');
+                formMessage.classList.add('text-red-500', 'py-2', 'text-center');
+                formMessage.textContent = 'Please enter your mobile number to receive text messages.';
+                phoneInput.focus();
+                return;
+            }
 
             const browserInfo = document.createElement('input');
       browserInfo.type = 'hidden';
